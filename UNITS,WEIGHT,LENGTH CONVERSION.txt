@@ -1,0 +1,60 @@
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def meters_to_feet(meters):
+    return meters * 3.28084
+
+def feet_to_meters(feet):
+    return feet * 0.3048
+
+def kilograms_to_pounds(kilograms):
+    return kilograms * 2.20462
+
+def pounds_to_kilograms(pounds):
+    return pounds * 0.453592
+
+def main():
+    print("Select conversion option:")
+    print("1. Temperature Converter (Celsius to Fahrenheit and vice versa)")
+    print("2. Length Converter (Meters to Feet and vice versa)")
+    print("3. Weight Converter (Kilograms to Pounds and vice versa)")
+    choice = int(input("Enter your choice (1, 2, or 3): "))
+
+    if choice == 1:
+        temp_choice = int(input("Choose temperature conversion direction (1 for Celsius to Fahrenheit, 2 for Fahrenheit to Celsius): "))
+        if temp_choice == 1:
+            celsius = float(input("Enter temperature in Celsius: "))
+            print(f"{celsius} Celsius is equal to {celsius_to_fahrenheit(celsius)} Fahrenheit")
+        elif temp_choice == 2:
+            fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+            print(f"{fahrenheit} Fahrenheit is equal to {fahrenheit_to_celsius(fahrenheit)} Celsius")
+        else:
+            print("Invalid choice")
+    elif choice == 2:
+        length_choice = int(input("Choose length conversion direction (1 for Meters to Feet, 2 for Feet to Meters): "))
+        if length_choice == 1:
+            meters = float(input("Enter length in meters: "))
+            print(f"{meters} Meters is equal to {meters_to_feet(meters)} Feet")
+        elif length_choice == 2:
+            feet = float(input("Enter length in feet: "))
+            print(f"{feet} Feet is equal to {feet_to_meters(feet)} Meters")
+        else:
+            print("Invalid choice")
+    elif choice == 3:
+        weight_choice = int(input("Choose weight conversion direction (1 for Kilograms to Pounds, 2 for Pounds to Kilograms): "))
+        if weight_choice == 1:
+            kilograms = float(input("Enter weight in kilograms: "))
+            print(f"{kilograms} Kilograms is equal to {kilograms_to_pounds(kilograms)} Pounds")
+        elif weight_choice == 2:
+            pounds = float(input("Enter weight in pounds: "))
+            print(f"{pounds} Pounds is equal to {pounds_to_kilograms(pounds)} Kilograms")
+        else:
+            print("Invalid choice")
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    main()
